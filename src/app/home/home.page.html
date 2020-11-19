@@ -10,14 +10,27 @@
 <ion-content>
   <ion-searchbar showCancelButton="always"></ion-searchbar>
 
-  <ion-card *ngFor="let category of categories">
-    <ion-card-header>
-      <ion-card-subtitle>{{category.name}}</ion-card-subtitle>
-    </ion-card-header>
+  <div *ngFor="let category of categories">
+    <ion-item>
+      <ion-title> {{category.name}} </ion-title>
+    </ion-item>
+    <ion-card *ngFor="let news of category.news">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="news.image"></ion-img>
+        </ion-thumbnail>
+        <ion-label>{{news.title}}</ion-label>
+      </ion-item>
+      <ion-card-content> {{news.summary}} </ion-card-content>
+      <ion-item>
+        <ion-chip outline color="primary" *ngFor="let tag of news.tags">
+          <ion-label>{{tag.name}}</ion-label>
+        </ion-chip>
+      </ion-item>
 
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile, and
-      climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+      <ion-item>
+        <ion-button size="small" fill="outline" slot="end">Ver mas</ion-button>
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>
