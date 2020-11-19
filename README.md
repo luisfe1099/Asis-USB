@@ -7,3 +7,19 @@
 5. cada detalle de noticia tiene el botón volver.
 ## para la otra semana
 6. Al buscar en la barra de búsqueda, filtra las noticias de cada sección que tenga coincidencias en alguna categoría. Si una sección no tiene noticias que coincidan, no sale.
+
+##Estructura del JSON
+category []
+	id
+	name
+	icon
+	news []
+		title
+		summary
+		content
+		image
+		tags[]
+			id
+			name
+		imgSize
+		contentSize
