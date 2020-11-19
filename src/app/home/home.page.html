@@ -10,22 +10,14 @@
 <ion-content>
   <ion-searchbar showCancelButton="always"></ion-searchbar>
 
-  <ion-grid class="section" *ngFor="let section of sections">
-    <ion-row class="header">
-      <ion-col class="title">
-        {{section.header.title}}
-      </ion-col>
-    </ion-row>
+  <ion-card *ngFor="let category of categories">
+    <ion-card-header>
+      <ion-card-subtitle>{{category.name}}</ion-card-subtitle>
+    </ion-card-header>
 
-    <ion-row class="body">
-      <ion-col [size]="section.body.imgSize && section.body.imgSize || sectionsConfig.imgSize">
-        <img [src]="section.body.img" alt="">
-      </ion-col>
-      <ion-col [size]="section.body.contentSize && section.body.contentSize || sectionsConfig.contentSize" class="content">
-        {{section.body.content}}
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
-
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile, and
+      climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
 </ion-content>
