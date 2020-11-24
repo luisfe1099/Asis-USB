@@ -1,0 +1,133 @@
+[
+    {
+        "id": 1,
+        "name": "Salud",
+        "icon": "alert",
+        "news":[
+            {
+                "title": "Noticia 1",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "Covid 19"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            },
+            {
+                "title": "Noticia 2",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "Salud mental"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Entretenimiento",
+        "icon": "alert",
+        "news":[
+            {
+                "title": "Noticia 1 Entretenimiento",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "Entretenimiento"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Ocio"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            },
+            {
+                "title": "Noticia 2 Entretenimiento",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "Ocio"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Deportes",
+        "icon": "alert",
+        "news":[
+            {
+                "title": "Noticia 1 Deportes",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "Futbol"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Tennis"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            },
+            {
+                "title": "Noticia 2 Deportes",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "E-Sports"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Fornite"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            },
+            {
+                "title": "Noticia 3 Deportes",
+                "sumary": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum...",
+                "content": "Quisque vestibulum ultrices turpis, sed sagittis lorem faucibus in. In vitae orci sed massa gravida vestibulum. Aliquam elementum id felis non pellentesque. Suspendisse malesuada urna ac nunc interdum condimentum. Proin dapibus, sapien nec dignissim blandit, sapien turpis viverra sapien, consectetur aliquet est tellus vestibulum ante. Nam interdum quis nisl eget condimentum.",
+                "image" : "https://picsum.photos/200/300",
+                "tags": [
+                    {
+                        "id": 1,
+                        "name": "Golf"
+                    }
+                ],
+                "imgSize": 3,
+                "contentSize": 9
+            }
+        ]
+    }
+]

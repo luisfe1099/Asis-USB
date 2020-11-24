@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'new-detail',
+    path: 'new-detail/:dataObj',
     loadChildren: () => import('./new-detail/new-detail.module').then( m => m.NewDetailPageModule)
   }
 ];

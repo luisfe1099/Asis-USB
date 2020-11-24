@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 
 interface CategoryI {
   id: number;
@@ -108,7 +109,15 @@ export class HomePage implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(
+    public router: Router
+  ) {}
 
   ngOnInit() {}
+
+  verDetalleNoticia(noticia){
+    let dataObj = noticia;
+    let dataString = JSON.stringify(dataObj);
+    this.router.navigate(['new-detail', dataString])
+  }
 }
