@@ -10,22 +10,27 @@
 <ion-content>
   <ion-searchbar showCancelButton="always"></ion-searchbar>
 
-  <ion-grid class="section" *ngFor="let section of sections">
-    <ion-row class="header">
-      <ion-col class="title">
-        {{section.header.title}}
-      </ion-col>
-    </ion-row>
+  <div *ngFor="let category of categories">
+    <ion-item>
+      <ion-title> {{category.name}} </ion-title>
+    </ion-item>
+    <ion-card *ngFor="let news of category.news">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="news.image"></ion-img>
+        </ion-thumbnail>
+        <ion-label>{{news.title}}</ion-label>
+      </ion-item>
+      <ion-card-content> {{news.summary}} </ion-card-content>
+      <ion-item>
+        <ion-chip outline color="primary" *ngFor="let tag of news.tags">
+          <ion-label>{{tag.name}}</ion-label>
+        </ion-chip>
+      </ion-item>
 
-    <ion-row class="body">
-      <ion-col [size]="section.body.imgSize && section.body.imgSize || sectionsConfig.imgSize">
-        <img [src]="section.body.img" alt="">
-      </ion-col>
-      <ion-col [size]="section.body.contentSize && section.body.contentSize || sectionsConfig.contentSize" class="content">
-        {{section.body.content}}
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
-
+      <ion-item>
+        <ion-button size="small" fill="outline" slot="end">Ver mas</ion-button>
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>

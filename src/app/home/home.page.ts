@@ -1,55 +1,114 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-interface SectionsI {
-  header: {
-    title: string
-  }
-  body: {
-    img: string
-    content: string
-    imgSize?: number
-    contentSize?: number
-  }
+interface CategoryI {
+  id: number;
+  name: string;
+  icon: string;
+  news: Array<News>;
+}
+
+interface News {
+  title: string;
+  summary: string;
+  content: string;
+  image: string;
+  tags: Array<Tag>;
+  imgSize?: number;
+  contentSize?: number;
+}
+
+interface Tag {
+  id: number;
+  name: string;
 }
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: "app-home",
+  templateUrl: "./home.page.html",
+  styleUrls: ["./home.page.scss"],
 })
 export class HomePage implements OnInit {
-
-  sectionsConfig = {
+  categoriesConfig = {
     imgSize: 3,
-    contentSize: 9
-  }
+    contentSize: 9,
+  };
 
-  sections: Array<SectionsI> = [
+  categories: Array<CategoryI> = [
     {
-      header: {
-        title: "Noticias"
-      },
-      body: {
-        img: "https://picsum.photos/200/300?random=1",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
-        imgSize: 3,
-        contentSize: 9
-      }
+      id: 1,
+      name: "Salud",
+      icon: "appstore",
+      news: [
+        {
+          title: "Noticia 1",
+          summary: "Preview content noticia 1",
+          content: "Lorem ipsum",
+          image: "https://picsum.photos/200/300",
+          tags: [
+            {
+              id: 1,
+              name: "Fitness",
+            },
+            {
+              id: 2,
+              name: "Arroz con huevo",
+            },
+            {
+              id: 3,
+              name: "SmartFit",
+            },
+            {
+              id: 4,
+              name: "CS:GO",
+            },
+            {
+              id: 5,
+              name: "ABerica",
+            },
+          ],
+          imgSize: 3,
+          contentSize: 9,
+        },
+        {
+          title: "Noticia 2",
+          summary: "Preview content noticia 2",
+          content: "Lorem ipsum",
+          image: "https://picsum.photos/200/300",
+          tags: [
+            {
+              id: 1,
+              name: "Name 1",
+            },
+          ],
+          imgSize: 3,
+          contentSize: 9,
+        },
+      ],
     },
     {
-      header: {
-        title: "Salud"
-      },
-      body: {
-        img: "https://picsum.photos/200/300?random=2",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
-      }
-    }
-  ]
+      id: 2,
+      name: "Tecnologia",
+      icon: "appstore",
+      news: [
+        {
+          title: "Noticia 3",
+          summary: "Preview content noticia 3",
+          content: "Lorem ipsum",
+          image: "https://picsum.photos/200/300",
+          tags: [
+            {
+              id: 1,
+              name: "Name 1",
+            },
+          ],
+          imgSize: 3,
+          contentSize: 9,
+        },
+      ],
+    },
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
