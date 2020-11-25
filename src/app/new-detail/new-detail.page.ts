@@ -23,7 +23,7 @@ interface Tag {
 })
 export class NewDetailPage implements OnInit {
 
-  public noticia = {};
+  public noticia:any = {};
   tituloSeccion: string;
 
   constructor(
