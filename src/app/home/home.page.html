@@ -23,9 +23,11 @@
       </ion-item>
       <ion-card-content> {{news.summary}} </ion-card-content>
       <ion-item>
-        <ion-chip outline color="primary" *ngFor="let tag of news.tags">
-          <ion-label>{{tag.name}}</ion-label>
-        </ion-chip>
+        <div style="overflow: auto; white-space: nowrap;">
+          <ion-chip outline color="primary" *ngFor="let tag of news.tags">
+            <ion-label>{{tag.name}}</ion-label>
+          </ion-chip>
+        </div>
       </ion-item>
 
       <ion-item>
