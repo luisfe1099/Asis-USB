@@ -10,11 +10,11 @@
 <ion-content>
   <ion-searchbar showCancelButton="always" (ionChange)="search($event)"></ion-searchbar>
 
-  <div *ngFor="let category of categories | searchNews: term">
+  <div *ngFor="let category of categories | searchCategories: term">
     <ion-item>
       <ion-title> {{category.name}} </ion-title>
     </ion-item>
-    <ion-card *ngFor="let news of category.news">
+    <ion-card *ngFor="let news of category.news | searchNews: term">
       <ion-item>
         <ion-thumbnail slot="start">
           <ion-img [src]="news.image"></ion-img>

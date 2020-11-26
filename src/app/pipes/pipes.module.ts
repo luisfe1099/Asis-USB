@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SearchCategoriesPipe } from './search-categories.pipe';
 import { SearchNewsPipe } from './search-news.pipe';
 
-
-
 @NgModule({
-  declarations: [SearchNewsPipe],
-  exports: [SearchNewsPipe],
+  declarations: [SearchCategoriesPipe, SearchNewsPipe],
+  exports: [SearchCategoriesPipe, SearchNewsPipe],
 })
 export class PipesModule { }
