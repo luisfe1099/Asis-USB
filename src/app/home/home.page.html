@@ -8,13 +8,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar showCancelButton="always"></ion-searchbar>
+  <ion-searchbar showCancelButton="always" (ionChange)="search($event)"></ion-searchbar>
 
-  <div *ngFor="let category of categories">
+  <div *ngFor="let category of categories | searchCategories: term">
     <ion-item>
       <ion-title> {{category.name}} </ion-title>
     </ion-item>
-    <ion-card *ngFor="let news of category.news">
+    <ion-card *ngFor="let news of category.news | searchNews: term">
       <ion-item>
         <ion-thumbnail slot="start">
           <ion-img [src]="news.image"></ion-img>
@@ -23,9 +23,11 @@
       </ion-item>
       <ion-card-content> {{news.summary}} </ion-card-content>
       <ion-item>
-        <ion-chip outline color="primary" *ngFor="let tag of news.tags">
-          <ion-label>{{tag.name}}</ion-label>
-        </ion-chip>
+        <div style="overflow: auto; white-space: nowrap;">
+          <ion-chip outline color="primary" *ngFor="let tag of news.tags">
+            <ion-label>{{tag.name}}</ion-label>
+          </ion-chip>
+        </div>
       </ion-item>
 
       <ion-item>

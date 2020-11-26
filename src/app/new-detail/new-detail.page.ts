@@ -36,9 +36,7 @@ export class NewDetailPage implements OnInit {
     let dataEnviada = this.activatedRoute.snapshot.paramMap.get('dataObj');
     dataEnviada = JSON.parse(dataEnviada);
     this.noticia = dataEnviada;
-    this.tituloSeccion = this.noticia.title;
-    console.log(this.noticia);
-    
+    this.tituloSeccion = this.noticia.title;    
   }
 
 }

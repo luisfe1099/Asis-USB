@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
 import { Category } from "../models/Category";
 import { NewsService } from "../services/news.service";
+import { Router } from "@angular/router";
+
 @Component({
   selector: "app-home",
   templateUrl: "./home.page.html",
@@ -12,6 +13,7 @@ export class HomePage implements OnInit {
     imgSize: 3,
     contentSize: 9,
   };
+  term: string;
 
   categories: Array<Category> = [];
 
@@ -19,6 +21,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.getAllNews();
+    this.search();
   }
 
   verDetalleNoticia(noticia) {
@@ -31,5 +34,9 @@ export class HomePage implements OnInit {
     this.newsService.getAllNews().subscribe((data) => {
       this.categories = data;
     });
+  }
+
+  search(event?: any) {
+    this.term = !event ? "" : event.detail.value;
   }
 }
