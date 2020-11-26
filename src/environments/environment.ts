@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  urlBack : 'http://localhost:3000',
+  urlBack : 'http://localhost:3000/',
   production: false
 };
 

@@ -1,6 +1,10 @@
-import { HttpClient } from "@angular/common/http";
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, throwError } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable({
@@ -10,7 +14,7 @@ export class NewsService {
   public url: string;
 
   constructor(private httpClient: HttpClient) {
-    this.url = environment.urlBack + "/news";
+    this.url = environment.urlBack + "news";
   }
 
   public getAllNews(): Observable<any> {

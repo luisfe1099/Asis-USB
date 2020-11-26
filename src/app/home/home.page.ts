@@ -28,8 +28,8 @@ export class HomePage implements OnInit {
   }
 
   getAllNews() {
-    this.newsService.getAllNews().subscribe(data=>{
+    this.newsService.getAllNews().subscribe((data) => {
       this.categories = data;
-    })
+    });
   }
 }
