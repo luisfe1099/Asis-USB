@@ -1,27 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
-
-interface CategoryI {
-  id: number;
-  name: string;
-  icon: string;
-  news: Array<News>;
-}
-
-interface News {
-  title: string;
-  summary: string;
-  content: string;
-  image: string;
-  tags: Array<Tag>;
-  imgSize?: number;
-  contentSize?: number;
-}
-
-interface Tag {
-  id: number;
-  name: string;
-}
+import { CategoryI } from '../classes/category-i';
 
 @Component({
   selector: "app-home",
@@ -33,6 +12,8 @@ export class HomePage implements OnInit {
     imgSize: 3,
     contentSize: 9,
   };
+
+  term: string;
 
   categories: Array<CategoryI> = [
     {
@@ -113,11 +94,18 @@ export class HomePage implements OnInit {
     public router: Router
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.search();
+  }
 
   verDetalleNoticia(noticia){
     let dataObj = noticia;
     let dataString = JSON.stringify(dataObj);
     this.router.navigate(['new-detail', dataString])
+  }
+
+  search(event?: any){
+    //console.log(event);
+    this.term = !event ? '' : event.detail.value;
   }
 }

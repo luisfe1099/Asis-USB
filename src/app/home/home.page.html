@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar showCancelButton="always"></ion-searchbar>
+  <ion-searchbar showCancelButton="always" (ionChange)="search($event)"></ion-searchbar>
 
-  <div *ngFor="let category of categories">
+  <div *ngFor="let category of categories | searchNews: term">
     <ion-item>
       <ion-title> {{category.name}} </ion-title>
     </ion-item>
